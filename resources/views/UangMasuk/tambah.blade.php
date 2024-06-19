@@ -9,9 +9,8 @@
                             <form method="post" action="{{route('storetambah')}}">
                                 @csrf
                                 
-                                <button class="btn btn-primary">
-                        <i class="fa fa-plus-circle"></i> Tambah</button>
- 
+                                <button type="submit" class="btn btn-primary">Tambah</button>
+                                
                             </form>
                         </div>
                     </div>

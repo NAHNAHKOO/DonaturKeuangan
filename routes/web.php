@@ -32,4 +32,6 @@ Route::resource('uangmasuk', UangMasukController::class);
 
 Route::resource('uangkeluar', UangKeluarController::class);
 
-Route::post('/UangKeluar/',[BukuController::class, 'store'])->name('storetambah');
+
+
+
