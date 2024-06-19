@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SessionController;
-use App\Http\Controllers\masukController;
+use App\Http\Controllers\UangMasukController;
 use App\Http\Controllers\userController;
 
 /*
@@ -24,7 +24,9 @@ Route::get('/', function () {
 Route::get('/dashboard',[DashboardController::class,'index']);
 Route::get('/sesi',[SessionController::class,'index']);
 Route::post('/sesi/login',[SessionController::class,'login'])->name('submitlogin');
-Route::get('/UangMasuk',[masukController::class,'index']);
+//Route::get('/UangMasuk',[masukController::class,'index']);
 Route::get('/user',[userController::class,'index']);
 
-Route::resource('uangmasuk', controller:UangMasukController::class);
+Route::resource('uangmasuk', UangMasukController::class);
+
+Route::resource('uangkeluar', UangKeluarController::class);
