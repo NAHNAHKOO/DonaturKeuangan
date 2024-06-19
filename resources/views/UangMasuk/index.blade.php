@@ -170,7 +170,7 @@
                         <i class="fa fa-file-excel"></i> Excel</button>
  
                     <button class="btn btn-danger">
-                        <i class="fa fa-file-pdf"></i> PDFFF</button>
+                        <i class="fa fa-file-pdf"></i> PDF</button>
  
  
                     <div style="float: right">
