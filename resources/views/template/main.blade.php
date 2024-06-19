@@ -51,7 +51,7 @@
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fas fa-wallet"></i></span><span class="pcoded-mtext">Keuangan</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="{{ route('uangmasuk.index')}}" target="">Uang Masuk</a></li>
-					        <li><a href="" target="">Uang Keluar</a></li>
+					        <li><a href="{{ route('uangkeluar.index')}}" target="">Uang Keluar</a></li>
 					    </ul>
 					</li>
 

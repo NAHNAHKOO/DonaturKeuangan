@@ -161,7 +161,7 @@
  
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h2 class="mb-3">Data Uang Masuk</h2>
+                    <h2 class="mb-3">Data Uang Keluar</h2>
  
                     <button class="btn btn-primary">
                         <i class="fa fa-plus-circle"></i> Tambah</button>
@@ -170,7 +170,7 @@
                         <i class="fa fa-file-excel"></i> Excel</button>
  
                     <button class="btn btn-danger">
-                        <i class="fa fa-file-pdf"></i> PDFFF</button>
+                        <i class="fa fa-file-pdf"></i> PDF</button>
  
  
                     <div style="float: right">
