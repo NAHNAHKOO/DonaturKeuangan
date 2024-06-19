@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\UangMasukController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\UangKeluarController;
 
 /*
 |--------------------------------------------------------------------------
