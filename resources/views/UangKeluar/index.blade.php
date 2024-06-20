@@ -161,7 +161,7 @@
  
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h2 class="mb-3">Data Uang Keluar</h2>
+                    <h3 class="mb-3">Data Uang Keluar</h3>
  
                     <button class="btn btn-primary">
                         <i class="fa fa-plus-circle"></i> Tambah</button>
