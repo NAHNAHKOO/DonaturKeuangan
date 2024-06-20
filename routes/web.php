@@ -30,6 +30,8 @@ Route::get('/DataUser',[DataUserController::class,'index'])->name('datauser');
 
 Route::resource('uangmasuk', UangMasukController::class);
 Route::resource('uangkeluar', UangKeluarController::class);
+Route::get('/tambahUangKeluar',[UangKeluarController::class,'create'])->name('tambahUangKeluar');
+Route::post('/UangKeluar/store',[UangKeluarController::class, 'store'])->name('simpanuangkeluar');
 
 
 

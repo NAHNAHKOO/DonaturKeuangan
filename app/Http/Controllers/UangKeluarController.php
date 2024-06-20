@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\UangKeluar;
  
-class UangKeluarController extends Controller
+class UangkeluarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +21,7 @@ class UangKeluarController extends Controller
      */
     public function create()
     {
-        //
+        return view('UangKeluar.tambah');
     }
  
     /**
@@ -29,7 +29,14 @@ class UangKeluarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->uangkeluar->mutasi = $request->mutasi;
+        $this->uangkeluar->tanggal = $request->tanggal;
+        $this->uangkeluar->uraian = $request->uraian;
+        $this->uangkeluar->keterangan = $request->keterangan;
+
+        $this->uangkeluar->save();
+
+        return redirect()->route('uangkeluar.')->with('status', 'Data uang keluar berhasil ditambahkan!');
     }
  
     /**
@@ -53,7 +60,15 @@ class UangKeluarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $update = Buku::findOrFail($id);
+        
+        $update->mutasi = $request->mutasi;
+        $update->tanggal = $request->tanggal;
+        $update->uraian = $request->uraian;
+        $update->keterangan = $request->keterangan;
+
+        $update->save();
+        return redirect()->route('uangkeluar');
     }
  
     /**
