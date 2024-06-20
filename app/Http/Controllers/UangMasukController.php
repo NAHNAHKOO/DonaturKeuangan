@@ -29,7 +29,14 @@ class UangMasukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->uangmasuk->mutasi = $request->mutasi;
+        $this->uangmasuk->tanggal = $request->tanggal;
+        $this->uangmasuk->uraian = $request->uraian;
+        $this->uangmasuk->keterangan = $request->keterangan;
+
+        $this->uangmasuk->save();
+
+        return redirect()->route('uangmasuk.')->with('status', 'Data uang masuk berhasil ditambahkan!');
     }
  
     /**
@@ -53,7 +60,15 @@ class UangMasukController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $update = Buku::findOrFail($id);
+        
+        $update->mutasi = $request->mutasi;
+        $update->tanggal = $request->tanggal;
+        $update->uraian = $request->uraian;
+        $update->keterangan = $request->keterangan;
+
+        $update->save();
+        return redirect()->route('uangmasuk');
     }
  
     /**

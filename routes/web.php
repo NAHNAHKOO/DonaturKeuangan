@@ -29,6 +29,8 @@ Route::post('/sesi/login',[SessionController::class,'login'])->name('submitlogin
 Route::get('/user',[userController::class,'index']);
 
 Route::resource('uangmasuk', UangMasukController::class);
+Route::get('/tambahUangMasuk',[UangMasukController::class,'create'])->name('tambahUangMasuk');
+Route::post('/UangMasuk/store',[UangMasukController::class, 'store'])->name('simpanuangmasuk');
 
 Route::resource('uangkeluar', UangKeluarController::class);
 

@@ -149,7 +149,7 @@
                                 <h5 class="m-b-10">Dashboard Keuangan</h5>
                             </div>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a>
+                                <li class="breadcrumb-item"><a><i class="feather icon-home"></i></a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="#!">Dashboard Keuangan</a></li>
                             </ul>
@@ -163,7 +163,7 @@
                 <div class="card-body table-border-style">
                     <h2 class="mb-3">Data Uang Masuk</h2>
  
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" href="{{route('tambahUangMasuk')}}">
                         <i class="fa fa-plus-circle" ></i> Tambah</button>
  
                     <button class="btn btn-success ml-5">
