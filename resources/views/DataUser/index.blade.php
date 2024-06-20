@@ -142,6 +142,8 @@
             <div class="card">
                 <div class="card-header">
                     <h5>Data User</h5>
+					<button class="btn btn-primary">
+                        <i class="fa fa-plus-circle" ></i> Tambah</button>
                 <div class="card-body table-border-style">
                     <div class="table-responsive">
                         <table class="table table-striped">

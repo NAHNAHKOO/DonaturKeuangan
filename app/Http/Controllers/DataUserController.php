@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\datauser;
+use App\Models\DataUser;
 
 class DataUserController extends Controller
 {
@@ -13,7 +13,7 @@ class DataUserController extends Controller
     public function index()
     {
         $data2 = DataUser::all();
-        return view('user.index', compact('data2'));
+        return view('DataUser.index', compact('data2'));
     }
 
     /**

@@ -45,7 +45,7 @@
 					    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
 					<li class="nav-item">
-					    <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"> <i class="fas fa-users"></i></span><span class="pcoded-mtext">Users</span></a>
+					    <a href="{{route('datauser')}}" class="nav-link "><span class="pcoded-micon"> <i class="fas fa-users"></i></span><span class="pcoded-mtext">Users</span></a>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="fas fa-wallet"></i></span><span class="pcoded-mtext">Keuangan</span></a>
