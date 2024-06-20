@@ -180,8 +180,54 @@
                         </div>
                     </div>
                 </div>
+
+				<div class="col-xl-12">
+					<div class="card">
+						<div class="card-header">
+							<h3>Data Keuangan</h3>
+						</div>
+						<div class="card-body table-border-style">
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Nama</th>
+											<th>Email</th>
+											<th>No HP</th>
+											<th>Role</th>
+		
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Jacob</td>
+											<td>Thornton</td>
+											<td>@fat</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>Larry</td>
+											<td>the Bird</td>
+											<td>@twitter</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
 					
                 
-                <!-- support-section end --
+                <!-- support-section end --!>
+
+		 
 
 @endsection
