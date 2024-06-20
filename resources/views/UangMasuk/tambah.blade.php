@@ -218,6 +218,7 @@
 </div>
 <div style="text-align: center">
     <div class="col-mb-10">
+        
         <button type="submit" class="btn  btn-primary" href="{{route('simpanuangmasuk')}}">Simpan</button>
     </div>
 </div>
