@@ -162,7 +162,7 @@
             <div class="card">
                 <div class="card-body table-border-style">
                     <h3 class="mb-3">Data Uang Masuk</h3>
-                    <a href="{{route('tambahuangmasuk')}}">
+                    <a href="{{route('tambahUangMasuk')}}">
                     <button class="btn btn-primary">
                         <i class="fa fa-plus-circle" >Tambah</i></button></a>
  

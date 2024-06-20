@@ -163,7 +163,7 @@
 
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h3 class="mb-3">Tambah Data Uang Masuk</h3>
+                    <h3 class="mb-3">Tambah Data Uang Keluar</h3>
                     <hr class="col-mt-20" style="border: 1px solid black;">
             <div class="row">
                 
@@ -172,7 +172,7 @@
        
         @csrf
         
-        <form action="{{url('UangMasuk')}}" method="POST">
+        <form action="{{url('UangKeluar')}}" method="POST">
             <div class="form-group row">
                 <label for="Mutasi" class="col-sm-2 col-form-label">Mutasi</label>
                 <div class="col-sm-5">
@@ -195,7 +195,7 @@
     </div>
     <div class="col-md-6">
         
-        <form action="{{url('UangMasuk')}}" method="POST">
+        <form action="{{url('Uangkeluar')}}" method="POST">
             <div class="form-group row">
                 <label for="inputMutasi" class="col-sm-2 col-form-label">Uraian</label>
                 <div class="col-sm-5">
@@ -219,7 +219,7 @@
 <div style="text-align: center">
     <div class="col-mb-10">
         
-        <button type="submit" class="btn  btn-primary" href="{{route('simpanuangmasuk')}}">Simpan</button>
+        <button type="submit" class="btn  btn-primary" href="{{route('simpanuangkeluar')}}">Simpan</button>
     </div>
 </div>
              

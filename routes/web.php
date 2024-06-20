@@ -33,6 +33,8 @@ Route::get('/tambahUangMasuk',[UangMasukController::class,'create'])->name('tamb
 Route::post('/UangMasuk/store',[UangMasukController::class, 'store'])->name('simpanuangmasuk');
 
 Route::resource('uangkeluar', UangKeluarController::class);
+Route::get('/tambahUangKeluar',[UangKeluarController::class,'create'])->name('tambahUangKeluar');
+Route::post('/UangKeluar/store',[UangKeluarController::class, 'store'])->name('simpanuangkeluar');
 
 
 
