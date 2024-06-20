@@ -21,7 +21,7 @@ class UangMasukController extends Controller
      */
     public function create()
     {
-        //
+        return view('UangMasuk.tambah');
     }
  
     /**

@@ -164,7 +164,7 @@
                     <h2 class="mb-3">Data Uang Masuk</h2>
  
                     <button class="btn btn-primary">
-                        <i class="fa fa-plus-circle"></i> Tambah</button>
+                        <i class="fa fa-plus-circle" ></i> Tambah</button>
  
                     <button class="btn btn-success ml-5">
                         <i class="fa fa-file-excel"></i> Excel</button>
