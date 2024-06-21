@@ -149,7 +149,7 @@
                                 <h5 class="m-b-10">Dashboard Keuangan</h5>
                             </div>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a><i class="feather icon-home"></i></a>
+                                <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="#!">Dashboard Keuangan</a></li>
                             </ul>
@@ -161,10 +161,10 @@
  
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h3 class="mb-3">Data Uang Masuk</h3>
-                    <a href="{{route('tambahUangMasuk')}}">
+                    <h2 class="mb-3">Data Uang Masuk</h2>
+ 
                     <button class="btn btn-primary">
-                        <i class="fa fa-plus-circle" >Tambah</i></button></a>
+                        <i class="fa fa-plus-circle" ></i> Tambah</button>
  
                     <button class="btn btn-success ml-5">
                         <i class="fa fa-file-excel"></i> Excel</button>
@@ -204,14 +204,9 @@
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $item->tanggal }}</td>
                                     <td>{{ $item->jenis_mutasi }}</td>
-                                    <td>{{ $item->nominal }}</td>
                                     <td>{{ $item->uraian }}</td>
-                                    <td>{{ $item->keterangan }}</td>
-                                    <td>
-                                        <button type="button" class="btn  btn-icon btn-outline-danger"><i
-                                                class="fa fa-trash"></i></button>
- 
-                                    </td>
+                                    <td>{{ $item->keterangan }}</td>                                  
+                                    
  
                                 </tr>
                             @endforeach

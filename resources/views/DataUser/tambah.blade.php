@@ -163,7 +163,7 @@
 
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h2 class="mb-3">Tambah Data Uang Masuk</h2>
+                    <h2 class="mb-3">Tambah Data User</h2>
                     <hr class="col-mt-20" style="border: 1px solid black;">
             <div class="row">
                 
@@ -172,22 +172,22 @@
        
         @csrf
         
-        <form action="{{url('UangMasuk')}}" method="POST">
+        <form action="{{url('DataUser')}}" method="POST">
             <div class="form-group row">
-                <label for="Mutasi" class="col-sm-2 col-form-label">Mutasi</label>
+                <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-5">
                 </div>
             </div>
             <div>
-                <input type="text" class="form-group col-sm-10" name="mutasi" id="mutasi">
+                <input type="text" class="form-group col-sm-10" name="Nama" id="nama">
             </div>
              <div class="form-group row">
-                <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
+                <label for="Email" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-5">
                 </div>
             </div>
             <div>
-                <input class="form-group col-sm-10" type="number" name="tanggal" id="tanggal">
+                <input class="form-group col-sm-10" type="text" name="Email" id="Email">
             </div>
            
            
@@ -195,17 +195,17 @@
     </div>
     <div class="col-md-6">
         
-        <form action="{{url('UangMasuk')}}" method="POST">
+        <form action="{{url('DataUser')}}" method="POST">
             <div class="form-group row">
-                <label for="inputMutasi" class="col-sm-2 col-form-label">Uraian</label>
+                <label for="NoHp" class="col-sm-2 col-form-label">No hp</label>
                 <div class="col-sm-5">
                 </div>
             </div>
             <div>
-                <input class="form-group col-sm-10" type="text">
+                <input class="form-group col-sm-10" type="number">
             </div>
             <div class="form-group row">
-                <label for="inputMutasi" class="col-sm-3 col-form-label">Keterangan</label>
+                <label for="Role" class="col-sm-3 col-form-label">Role</label>
                 <div class="col-sm-5">
                 </div>
             </div>
@@ -218,7 +218,7 @@
 </div>
 <div style="text-align: center">
     <div class="col-mb-10">
-        <button type="submit" class="btn  btn-primary" href="{{route('simpanuangmasuk')}}">Simpan</button>
+        <button type="submit" class="btn  btn-primary" href="{{route('simpanDataUser')}}">Simpan</button>
     </div>
 </div>
              

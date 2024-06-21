@@ -21,7 +21,7 @@ class DataUserController extends Controller
      */
     public function create()
     {
-        //
+        return view('DataUser.tambah');
     }
 
     /**
