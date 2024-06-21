@@ -210,8 +210,8 @@
 												<td>{{ $item->uraian }}</td>
 												<td>{{ $item->keterangan }}</td>
 												<td>
-													<button type="button" class="btn  btn-icon btn-outline-danger"><i
-															class="fa fa-trash"></i></button>
+													<a class="btn btn-dark rounded-pill m-2" href="{{route('editpenerbit',$item->id)}}">Edit</a>
+													<a class="btn btn-light rounded-pill m-2" href="{{route('hapuspenerbit',$item->id)}}">Hapus</a>
 												</td>
 											</tr>
 										@endforeach

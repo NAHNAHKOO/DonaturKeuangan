@@ -161,10 +161,10 @@
  
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h2 class="mb-3">Data Uang Masuk</h2>
-                    
-                    <button class="btn btn-primary" href="{{route('tambahUangMasuk')}}">
-                        <i class="fa fa-plus-circle" ></i> Tambah</button>
+                    <h3 class="mb-3">Data Uang Masuk</h3>
+                    <a href="{{route('tambahUangMasuk')}}">
+                    <button class="btn btn-primary">
+                        <i class="fa fa-plus-circle" >Tambah</i></button></a>
  
                     <button class="btn btn-success ml-5">
                         <i class="fa fa-file-excel"></i> Excel</button>

@@ -163,7 +163,7 @@
 
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h3 class="mb-3">Tambah Data Uang Masuk</h3>
+                    <h2 class="mb-3">Tambah Data Uang Masuk</h2>
                     <hr class="col-mt-20" style="border: 1px solid black;">
             <div class="row">
                 
@@ -218,7 +218,6 @@
 </div>
 <div style="text-align: center">
     <div class="col-mb-10">
-        
         <button type="submit" class="btn  btn-primary" href="{{route('simpanuangmasuk')}}">Simpan</button>
     </div>
 </div>

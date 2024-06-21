@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\DataUser;
 
-class dashboardController extends Controller
+class DataUserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = index::all();
-        return view('dashboard.index', compact('data'));
+        $data2 = DataUser::all();
+        return view('DataUser.index', compact('data2'));
     }
 
     /**

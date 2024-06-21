@@ -130,7 +130,7 @@
                             <h5 class="m-b-10">Dashboard Keuangan</h5>
                         </div>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href=""><i class="feather icon-home"></i></a></li>
                             <li class="breadcrumb-item"><a href="#!">Dashboard Keuangan</a></li>
                         </ul>
                     </div>
@@ -142,7 +142,8 @@
             <div class="card">
                 <div class="card-header">
                     <h5>Data User</h5>
-                </div>
+					<button class="btn btn-primary">
+                        <i class="fa fa-plus-circle" ></i> Tambah</button>
                 <div class="card-body table-border-style">
                     <div class="table-responsive">
                         <table class="table table-striped">
@@ -157,24 +158,19 @@
                                 </tr>
                             </thead>
                             <tbody>
+								@php
+                                $no = 1;
+                            @endphp
+                            @foreach ($data2 as $item)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+                                    <td>{{ $no++ }}</td>
+                                    <td>{{ $item->Nama }}</td>
+                                    <td>{{ $item->Email }}</td>
+                                    <td>{{ $item->No_Hp }}</td>
+                                    <td>{{ $item->Role }}</td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
+                            @endforeach
+                                
                             </tbody>
                         </table>
                     </div>
