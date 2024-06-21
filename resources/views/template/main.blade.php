@@ -19,13 +19,6 @@
 
 </head>
 <body class="">
-	<!-- [ Pre-loader ] start -->
-	<div class="loader-bg">
-		<div class="loader-track">
-			<div class="loader-fill"></div>
-		</div>
-	</div>
-	<!-- [ Pre-loader ] End -->
 	<!-- [ navigation menu ] start -->
 	<nav class="pcoded-navbar menu-light ">
 		<div class="navbar-wrapper  ">
@@ -57,7 +50,7 @@
 
 				</ul>
 				
-				<div class="card text-center">
+				<!-- <div class="card text-center">
 					<div class="card-block">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 						<i class="feather icon-sunset f-40"></i>
@@ -65,7 +58,7 @@
 						<p>Getting more features with pro version</p>
 						<a href="https://1.envato.market/qG0m5" target="_blank" class="btn btn-primary btn-sm text-white m-0">Upgrade Now</a>
 					</div>
-				</div>
+				</div> -->
 				
 			</div>
 		</div>
@@ -83,7 +76,7 @@
     <script src="{{asset('ablepro-master')}}/dist/assets/js/vendor-all.min.js"></script>
     <script src="{{asset('ablepro-master')}}/dist/assets/js/plugins/bootstrap.min.js"></script>
     <script src="{{asset('ablepro-master')}}/dist/assets/js/ripple.js"></script>
-    <script src="{{asset('ablepro-master')}}/dist/assets/js/pcoded.min.js"></script>
+    <!-- <script src="{{asset('ablepro-master')}}/dist/assets/js/pcoded.min.js"></script> -->
 
 <!-- Apex Chart -->
 <script src="{{asset('ablepro-master')}}/dist/assets/js/plugins/apexcharts.min.js"></script>

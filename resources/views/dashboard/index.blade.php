@@ -180,7 +180,7 @@
                         </div>
                     </div>
                 </div>
-
+    {{-- table Keuangan --}}
 				<div class="col-xl-12">
 					<div class="card">
 						<div class="card-header">
@@ -191,37 +191,46 @@
 								<table class="table table-striped">
 									<thead>
 										<tr>
-											<th>No</th>
-											<th>Nama</th>
-											<th>Email</th>
-											<th>No HP</th>
-											<th>Role</th>
-		
+											<th>NO</th>
+											<th>TANGGAL</th>
+											<th>NOMINAL</th>
+											<th>URAIAN</th>
+											<th>KETERANGAN</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Mark</td>
-											<td>Otto</td>
-											<td>@mdo</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Jacob</td>
-											<td>Thornton</td>
-											<td>@fat</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Larry</td>
-											<td>the Bird</td>
-											<td>@twitter</td>
-										</tr>
+										@php
+											$no = 1;
+										@endphp
+										@foreach ($data as $item)
+											<tr>
+												<td>{{ $no++ }}</td>
+												<td>{{ $item->tanggal }}</td>
+												<td>{{ $item->nominal }}</td>
+												<td>{{ $item->uraian }}</td>
+												<td>{{ $item->keterangan }}</td>
+												<td>
+													<a class="btn btn-dark rounded-pill m-2" href="{{route('editpenerbit',$item->id)}}">Edit</a>
+													<a class="btn btn-light rounded-pill m-2" href="{{route('hapuspenerbit',$item->id)}}">Hapus</a>
+												</td>
+											</tr>
+										@endforeach
 									</tbody>
 								</table>
 							</div>
 						</div>
+						<div style="align: right">
+						<nav >
+							<ul class="pagination justify-content-end">
+								<li class="page-item disabled"><span class="page-link">Previous</span></li>
+								<li class="page-item"><a class="page-link" href="#!">1</a></li>
+								<li class="page-item active"><span class="page-link">2<span class="sr-only">(current)</span></span>
+								</li>
+								<li class="page-item"><a class="page-link" href="#!">3</a></li>
+								<li class="page-item"><a class="page-link" href="#!">Next</a></li>
+							</ul>
+						</nav>
+					</div>
 					</div>
 				</div>
 					
