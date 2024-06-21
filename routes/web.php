@@ -19,7 +19,7 @@ use App\Http\Controllers\UangKeluarController;
 */
 
 Route::get('/', function () {
-    return view('sesi.index');
+    return view('sesi.indexs');
 });
 
 Route::get('/dashboard',[dashboardController::class,'index']);
