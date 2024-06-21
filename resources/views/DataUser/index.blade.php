@@ -142,7 +142,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5>Data User</h5>
-					<button class="btn btn-primary">
+					<button class="btn btn-primary" class="pagination justify-content-end">
                         <i class="fa fa-plus-circle" ></i> Tambah</button>
                 <div class="card-body table-border-style">
                     <div class="table-responsive">

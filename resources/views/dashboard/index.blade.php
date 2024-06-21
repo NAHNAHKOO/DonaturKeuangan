@@ -209,10 +209,7 @@
 												<td>{{ $item->nominal }}</td>
 												<td>{{ $item->uraian }}</td>
 												<td>{{ $item->keterangan }}</td>
-												<td>
-													<a class="btn btn-dark rounded-pill m-2" href="{{route('editpenerbit',$item->id)}}">Edit</a>
-													<a class="btn btn-light rounded-pill m-2" href="{{route('hapuspenerbit',$item->id)}}">Hapus</a>
-												</td>
+												
 											</tr>
 										@endforeach
 									</tbody>
