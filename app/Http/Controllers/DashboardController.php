@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\UangMasuk;
 
 class dashboardController extends Controller
 {
@@ -11,8 +12,8 @@ class dashboardController extends Controller
      */
     public function index()
     {
-        $data = index::all();
-        return view('dashboard.index', compact('data'));
+        $data = UangMasuk::all();
+        return view('dashboard.index',compact('data'));
     }
 
     /**

@@ -19,7 +19,7 @@ use App\Http\Controllers\UangKeluarController;
 */
 
 Route::get('/', function () {
-    return view('sesi.indexs');
+    return view('sesi.index');
 });
 
 Route::get('/dashboard',[dashboardController::class,'index']);
@@ -29,6 +29,7 @@ Route::post('/sesi/login',[SessionController::class,'login'])->name('submitlogin
 Route::get('/DataUser',[DataUserController::class,'index'])->name('datauser');
 
 Route::resource('uangmasuk', UangMasukController::class);
+route::get('uangmasuk',[UangMasukcontroller::class])->name('uangmasuk.index');
 Route::get('/tambahUangMasuk',[UangMasukController::class,'create'])->name('tambahUangMasuk');
 Route::post('/UangMasuk/store',[UangMasukController::class, 'store'])->name('simpanuangmasuk');
 
