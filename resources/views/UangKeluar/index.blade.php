@@ -161,7 +161,7 @@
  
             <div class="card">
                 <div class="card-body table-border-style">
-                <h3 class="mb-3">Data Uang Keluar</h3>
+                <h3 class="mb-3">Data Keuangan</h3>
                     <a href="{{route('tambahUangKeluar')}}">
                     <button class="btn btn-primary">
                         <i class="fa fa-plus-circle" >Tambah</i></button></a>
@@ -208,7 +208,7 @@
                                     <td>{{ $item->uraian }}</td>
                                     <td>{{ $item->keterangan }}</td>
                                     <td>
-                                        <button type="button" class="btn  btn-icon btn-outline-danger"><i
+                                        <button type="button" class="btn  btn-icon btn-outline-danger"><i  
                                                 class="fa fa-trash"></i></button>
  
                                     </td>

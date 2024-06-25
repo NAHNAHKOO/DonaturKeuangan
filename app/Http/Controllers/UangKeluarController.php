@@ -60,7 +60,7 @@ class UangkeluarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $update = Buku::findOrFail($id);
+        $update = UangKeluar::findOrFail($id);
         
         $update->mutasi = $request->mutasi;
         $update->tanggal = $request->tanggal;
@@ -76,6 +76,10 @@ class UangkeluarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
+      $hapus = UangKeluar::findOrFail($id);
+      $hapus->delete();
+      return redirect()->route('hapusuangkeluar');
+        
     }
 }

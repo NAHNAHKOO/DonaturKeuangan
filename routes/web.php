@@ -28,14 +28,10 @@ Route::post('/sesi/login',[SessionController::class,'login'])->name('submitlogin
 //Route::get('/UangMasuk',[masukController::class,'index']);
 Route::get('/DataUser',[DataUserController::class,'index'])->name('datauser');
 
-Route::resource('uangmasuk', UangMasukController::class);
-route::get('uangmasuk',[UangMasukcontroller::class])->name('uangmasuk.index');
-Route::get('/tambahUangMasuk',[UangMasukController::class,'create'])->name('tambahUangMasuk');
-Route::post('/UangMasuk/store',[UangMasukController::class, 'store'])->name('simpanuangmasuk');
-
 Route::resource('uangkeluar', UangKeluarController::class);
 Route::get('/tambahUangKeluar',[UangKeluarController::class,'create'])->name('tambahUangKeluar');
 Route::post('/UangKeluar/store',[UangKeluarController::class, 'store'])->name('simpanuangkeluar');
+Route::get('/dashboard/hapusUangKeluar/{id}',[UangKeluarController::class,'destroy'])->name('hapusuangkeluar');
 
 
 
