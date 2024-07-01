@@ -184,6 +184,11 @@
 				<div class="col-xl-12">
 					<div class="card">
 						<div class="card-header">
+							<form action="" method="GET">
+								<input type="text" name="query">
+								<button type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search..</button>
+							</form>
+							
 							<h3>Data Keuangan</h3>
 						</div>
 						<div class="card-body table-border-style">

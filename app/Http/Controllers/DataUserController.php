@@ -27,9 +27,20 @@ class DataUserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
+     public function __construct(){
+        $this->datauser = new DataUser;
+    }
     public function store(Request $request)
     {
-        //
+        $this->datauser->nama = $request->nama;
+        $this->datauser->email = $request->email;
+        $this->datauser->no_hp = $request->nohp;
+        $this->datauser->role = $request->role;
+
+        $this->datauser->save();
+
+        return redirect()->route('datauser.index')->with('status', 'Data uang keluar berhasil ditambahkan!');
     }
 
     /**
@@ -53,7 +64,15 @@ class DataUserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $update = Datauser::findOrFail($id);
+        
+        $update->nama = $request->nama;
+        $update->email = $request->email;
+        $update->no_hp = $request->nohp;
+        $update->role = $request->role;
+       
+        $update->save();
+        return redirect()->route('DataUser');
     }
 
     /**
@@ -61,6 +80,8 @@ class DataUserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $hapus = DataUser::findOrFail($id);
+        $hapus->delete();
+        return redirect()->route('hapusDataUser');
     }
 }

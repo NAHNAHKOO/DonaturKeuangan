@@ -2,8 +2,12 @@
  
 namespace App\Http\Controllers;
  
-use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\Models\UangKeluar;
+use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
+use App\Exports\UangKeluarExport;
+use Maatwebsite\Excel\Facades\Excel;
  
 class UangkeluarController extends Controller
 {
@@ -27,16 +31,21 @@ class UangkeluarController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
+     public function __construct(){
+        $this->uangkeluar = new UangKeluar;
+    }
     public function store(Request $request)
     {
-        $this->uangkeluar->mutasi = $request->mutasi;
+        $this->uangkeluar->jenis_mutasi = $request->jenismutasi;
         $this->uangkeluar->tanggal = $request->tanggal;
+        $this->uangkeluar->nominal = $request->nominal;
         $this->uangkeluar->uraian = $request->uraian;
         $this->uangkeluar->keterangan = $request->keterangan;
 
         $this->uangkeluar->save();
 
-        return redirect()->route('uangkeluar.')->with('status', 'Data uang keluar berhasil ditambahkan!');
+        return redirect()->route('uangkeluar.index')->with('status', 'Data uang keluar berhasil ditambahkan!');
     }
  
     /**
@@ -62,13 +71,14 @@ class UangkeluarController extends Controller
     {
         $update = UangKeluar::findOrFail($id);
         
-        $update->mutasi = $request->mutasi;
+        $update->jenis_mutasi = $request->jenismutasi;
         $update->tanggal = $request->tanggal;
+        $update->nominal = $request->nominal;
         $update->uraian = $request->uraian;
         $update->keterangan = $request->keterangan;
 
         $update->save();
-        return redirect()->route('uangkeluar');
+        return redirect()->route('UangKeluar');
     }
  
     /**
@@ -79,7 +89,19 @@ class UangkeluarController extends Controller
         
       $hapus = UangKeluar::findOrFail($id);
       $hapus->delete();
-      return redirect()->route('hapusuangkeluar');
+      return redirect()->route('hapusUangKeluar');
         
+    }
+
+     public function export() 
+    {
+        return Excel::download(new UangKeluarExport, 'UangKeluar-'.Carbon::now()->timestamp.'.xlsx');
+    }
+
+    public function exportpdf()
+    {
+        $data = UangKeluar::all();    
+        $pdf = Pdf::loadView('pdf.export-UangKeluar', ['data' => $data]);
+        return $pdf->download('pdf-UangKeluar-'.Carbon::now()->timestamp.'.pdf');
     }
 }

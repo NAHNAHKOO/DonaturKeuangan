@@ -83,7 +83,7 @@
     <script src="{{asset('ablepro-master')}}/dist/assets/js/vendor-all.min.js"></script>
     <script src="{{asset('ablepro-master')}}/dist/assets/js/plugins/bootstrap.min.js"></script>
     <script src="{{asset('ablepro-master')}}/dist/assets/js/ripple.js"></script>
-    {{-- <script src="{{asset('ablepro-master')}}/dist/assets/js/pcoded.min.js"></script> --}}
+    <script src="{{asset('ablepro-master')}}/dist/assets/js/pcoded.min.js"></script> 
 
 <!-- Apex Chart -->
 <script src="{{asset('ablepro-master')}}/dist/assets/js/plugins/apexcharts.min.js"></script>

@@ -25,7 +25,7 @@
 							<input type="checkbox" class="custom-control-input" id="customCheck1">
 							<label class="custom-control-label" for="customCheck1">Save credentials.</label>
 						</div>
-						<button class="btn btn-block btn-primary mb-4" name="submit" type="submit">Signin</button>
+						<button class="btn btn-block btn-primary mb-4" href="{{route('submitlogin')}}" name="submit" type="submit">Signin</button>
 						<p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html" class="f-w-400">Reset</a></p>
 						<p class="mb-0 text-muted">Don’t have an account? <a href="auth-signup.html" class="f-w-400">Signup</a></p>
 					    </div>

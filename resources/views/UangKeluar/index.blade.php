@@ -161,23 +161,21 @@
  
             <div class="card">
                 <div class="card-body table-border-style">
-                <h3 class="mb-3">Data Keuangan</h3>
+                <h3 class="mb-3">Data Uang Keluar</h3>
                     <a href="{{route('tambahUangKeluar')}}">
                     <button class="btn btn-primary">
                         <i class="fa fa-plus-circle" >Tambah</i></button></a>
                         
-                    <button class="btn btn-success ml-5">
-                        <i class="fa fa-file-excel"></i> Excel</button>
+                    <a class="btn btn-success fa fa-file-excel " href="{{route('exportUangKeluar')}}">Excel</a>
  
-                    <button class="btn btn-danger">
-                        <i class="fa fa-file-pdf"></i> PDF</button>
- 
+                    <a class="btn btn-danger fa fa-file-pdf " href="{{route('exportUangKeluarpdf')}}">PDF</a>
+
  
                     <div style="float: right">
                         <form class="form-inline">
                             <div class="form-group mx-sm-3 mb-2">
-                                <label for="inputPassword2" class="sr-only">Password</label>
-                                <input type="password" class="form-control" id="inputPassword2" placeholder="Search...">
+                                <label for="Search" class="sr-only"></label>
+                                <input type="text" class="form-control" id="inputPassword2" placeholder="Search...">
                             </div>
                             <button type="submit" class="btn  btn-primary mb-2">
                                 <i class="fa fa-search"></i> Cari</button>
@@ -208,7 +206,7 @@
                                     <td>{{ $item->uraian }}</td>
                                     <td>{{ $item->keterangan }}</td>
                                     <td>
-                                        <button type="button" class="btn  btn-icon btn-outline-danger"><i  
+                                        <button class="btn  btn-icon btn-outline-danger" href="{{route('hapusUangKeluar',$item->id)}}" onclick="return confirm('Anda yakin ingin menghapus data?')"><i  
                                                 class="fa fa-trash"></i></button>
  
                                     </td>

@@ -163,64 +163,69 @@
 
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h3 class="mb-3">Tambah Data keuangan</h3>
+                    <h3 class="mb-3">Tambah Data Uang Keluar</h3>
                     <hr class="col-mt-20" style="border: 1px solid black;">
             <div class="row">
                 
-    <div class="col-md-6">
+    <div class="col-md-12">
        
        
-        @csrf
         
-        <form action="{{url('UangKeluar')}}" method="POST">
-            <div class="form-group row">
-                <label for="Mutasi" class="col-sm-2 col-form-label">Mutasi</label>
-                <div class="col-sm-5">
-                </div>
-            </div>
-            <div>
-                <input type="text" class="form-group col-sm-10" name="mutasi" id="mutasi">
-            </div>
-             <div class="form-group row">
-                <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
-                <div class="col-sm-5">
-                </div>
-            </div>
-            <div>
-                <input class="form-group col-sm-10" type="number" name="tanggal" id="tanggal">
-            </div>
-           
-           
-        </form>
-    </div>
-    <div class="col-md-6">
         
-        <form action="{{url('Uangkeluar')}}" method="POST">
-            <div class="form-group row">
-                <label for="inputMutasi" class="col-sm-2 col-form-label">Uraian</label>
-                <div class="col-sm-5">
-                </div>
-            </div>
-            <div>
-                <input class="form-group col-sm-10" type="text">
-            </div>
-            <div class="form-group row">
-                <label for="inputMutasi" class="col-sm-3 col-form-label">Keterangan</label>
-                <div class="col-sm-5">
-                </div>
-            </div>
-            <div>
-                <input class="form-group col-sm-10" type="text">
-            </div>
-        </form>
-        
+        <form method="POST" action="{{route('simpanuangkeluar')}}">
+            @csrf
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Tanggal</label>
+                                    <input type="date" name="tanggal" class="form-control" placeholder="Text">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Jenis Mutasi</label>
+                                    <select class="form-control" name="jenismutasi" id="exampleFormControlSelect1">
+                                        <option hidden>- Pilih jenis mutasi</option>
+                                        <option value="uang_masuk">Uang Masuk</option>
+                                        <option value="uang_keluar">Uang Keluar</option>
+                                    </select>
+                                </div>
+                            </div>
+ 
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Nominal</label>
+                                    <input type="text" name="nominal"class="form-control" placeholder="Masukkan nominal">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Keterangan</label>
+                                    <input type="text" name="keterangan" class="form-control" placeholder="Masukkan keterangan">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Uraian</label>
+                                    <textarea name="uraian" class="form-control" id="" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <center>
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fa fa-save"></i> Simpan
+                            </button>
+                        </center>
+ 
+                    </form>
+
     </div>
 </div>
-<div style="text-align: center">
-    <div class="col-mb-10">
-        
-        <button type="submit" class="btn  btn-primary" href="{{route('simpanuangkeluar')}}">Simpan</button>
-    </div>
-</div>
+
              
 @endsection
