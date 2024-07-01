@@ -163,7 +163,7 @@
 
             <div class="card">
                 <div class="card-body table-border-style">
-                    <h3 class="mb-3">Tambah Data Uang Keluar</h3>
+                    <h3 class="mb-3">Tambah Data keuangan</h3>
                     <hr class="col-mt-20" style="border: 1px solid black;">
             <div class="row">
                 
