@@ -26,7 +26,6 @@ Route::get('/', function () {
 Route::get('/dashboard',[dashboardController::class,'index']);
 Route::get('/sesi',[SessionController::class,'index']);
 Route::post('/sesi/login',[SessionController::class,'login'])->name('submitlogin');
-//Route::get('/UangMasuk',[masukController::class,'index']);
 Route::get('/DataUser',[DataUserController::class,'index'])->name('datauser');
 Route::get('/tambahDataUser',[DataUserController::class,'create'])->name('storetambahDataUser');
 Route::post('/DataUser',[DataUserController::class, 'store'])->name('simpandatauser');
@@ -40,7 +39,7 @@ Route::get('/tambahUangKeluar',[UangKeluarController::class,'create'])->name('ta
 Route::post('/UangKeluar',[UangKeluarController::class, 'store'])->name('simpanuangkeluar');
 Route::get('/UangKeluar-export',[UangKeluarController::class,'export'])->name('exportUangKeluar');
 Route::get('/export-pdf',[UangKeluarController::class,'exportpdf'])->name('exportUangKeluarpdf');
-Route::get('/uangkeluar/hapusUangKeluar/{id}',[UangKeluarController::class,'destroy'])->name('hapusUangKeluar');
+Route::get('/UangKeluar/hapusUangKeluar/{id}',[UangKeluarController::class,'destroy'])->name('hapusUangKeluar');
 
 // safira's
 Route::get('/search', [SearchController::class, 'search'])->name('search');

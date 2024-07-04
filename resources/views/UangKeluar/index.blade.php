@@ -206,11 +206,8 @@
                                     <td>{{ $item->uraian }}</td>
                                     <td>{{ $item->keterangan }}</td>
                                     <td>
-                                        <button class="btn  btn-icon btn-outline-danger" href="{{route('hapusUangKeluar',$item->id)}}" onclick="return confirm('Anda yakin ingin menghapus data?')"><i  
-                                                class="fa fa-trash"></i></button>
- 
+                                    <button type="button" class="btn  btn-icon btn-outline-danger" href="{{route('hapusUangKeluar',$item->id)}}"><i class="feather icon-trash"></i></button>                                    </td>
                                     </td>
- 
                                 </tr>
                             @endforeach
                         </tbody>
@@ -224,3 +221,5 @@
     </div>
     <!-- [ stiped-table ] end -->
 @endsection
+
+

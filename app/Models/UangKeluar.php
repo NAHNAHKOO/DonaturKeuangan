@@ -9,5 +9,5 @@ class UangKeluar extends Model
 {
     use HasFactory;
 
-    protected $table ='uang_keluar';
+    protected $table ='keuangan';
 }

@@ -179,6 +179,9 @@
                                 <div class="form-group">
                                     <label>Tanggal</label>
                                     <input type="date" name="tanggal" class="form-control" placeholder="Text">
+                                @error('tanggal')
+                            <small class="text-danger">{{$message}}</small>
+                        @enderror
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -189,29 +192,43 @@
                                         <option value="uang_masuk">Uang Masuk</option>
                                         <option value="uang_keluar">Uang Keluar</option>
                                     </select>
+                                    @error('jenismutasi')
+                            <small class="text-danger">{{$message}}</small>
+                        @enderror
                                 </div>
                             </div>
- 
+                        
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Nominal</label>
                                     <input type="text" name="nominal"class="form-control" placeholder="Masukkan nominal">
+                                    @error('nominal')
+                                        <small class="text-danger">{{$message}}</small>
+                                    @enderror
                                 </div>
+                        
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Keterangan</label>
                                     <input type="text" name="keterangan" class="form-control" placeholder="Masukkan keterangan">
+                                     @error('keterangan')
+                                    <small class="text-danger">{{$message}}</small>
+                                    @enderror
                                 </div>
                             </div>
+                       
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label>Uraian</label>
                                     <textarea name="uraian" class="form-control" id="" cols="30" rows="10"></textarea>
+                                @error('uraian')
+                                        <small class="text-danger">{{$message}}</small>
+                                    @enderror
                                 </div>
                             </div>
                         </div>

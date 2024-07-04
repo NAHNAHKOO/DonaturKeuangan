@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Exports\UangKeluarExport;
 use Maatwebsite\Excel\Facades\Excel;
+
  
 class UangkeluarController extends Controller
 {
@@ -37,6 +38,19 @@ class UangkeluarController extends Controller
     }
     public function store(Request $request)
     {
+         $rules = [
+            'tanggal' => 'required',
+            'jenismutasi' => 'required',
+            'nominsal' => 'required',
+            'uraian' => 'required',
+            'keterangan' => 'required',
+        ];
+        $messages = [
+            'required' => 'data yang di input tidak sesuai'
+        ];
+        
+        $this->validate($request, $rules, $messages);
+
         $this->uangkeluar->jenis_mutasi = $request->jenismutasi;
         $this->uangkeluar->tanggal = $request->tanggal;
         $this->uangkeluar->nominal = $request->nominal;
